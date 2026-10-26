@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مذاق، مدونة وصفات عربية مجربة خطوة بخطوة.">
+  <title>مذاق | مدونة الطعام</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#top" class="logo">مذاق</a>
+    <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="#recipes">الوصفات</a>
+      <a href="#featured">وصفة الأسبوع</a>
+      <a href="#about">عن المدونة</a>
+      <a href="#subscribe">النشرة البريدية</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>الطعم الذي يجمع العائلة حول الطاولة</h1>
+        <p class="hero-lead">وصفات مجربة في بيتنا، مكتوبة خطوة بخطوة، من المطبخ الشامي وحلويات الأعياد والمشروبات الصيفية.</p>
+        <a href="#recipes" class="btn">تصفح الوصفات</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.jpg" alt="طبق عربي مزين على طاولة خشبية">
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <div class="featured-image">
+        <img src="images/featured.jpg" alt="صينية كبسة الدجاج بالأرز والمكسرات">
+      </div>
+      <div class="featured-text">
+        <h2>وصفة الأسبوع: كبسة الدجاج</h2>
+        <p>وصفة بيتية تحتاج صبرًا قليلًا، والنتيجة أرز معطّر وفاخر على طبق واحد. جربها في عزومة الجمعة.</p>
+        <button class="btn btn-outline" data-open="f">اقرأ الوصفة</button>
+      </div>
+    </section>
+
+    <section class="recipes" id="recipes">
+      <div class="section-head">
+        <h2>كل الوصفات</h2>
+        <input type="search" class="search" id="search" placeholder="ابحث عن وصفة..." aria-label="ابحث عن وصفة">
+      </div>
+
+      <div class="filters" role="group" aria-label="تصفية حسب التصنيف">
+        <button class="filter active" data-filter="all" aria-pressed="true">الكل</button>
+        <button class="filter" data-filter="حلويات" aria-pressed="false">حلويات</button>
+        <button class="filter" data-filter="مأكولات" aria-pressed="false">مأكولات</button>
+        <button class="filter" data-filter="سلطات" aria-pressed="false">سلطات</button>
+        <button class="filter" data-filter="مشروبات" aria-pressed="false">مشروبات</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="card" data-category="حلويات" data-title="كنافة نابلسية">
+          <img src="images/recipe-1.jpg" alt="كنافة نابلسية بالجبنة والقطر" loading="lazy">
+          <div class="card-body">
+            <span class="tag">حلويات</span>
+            <h3>كنافة نابلسية</h3>
+            <p class="meta">60 دقيقة · متوسط</p>
+            <button class="link-btn" data-open="1">اقرأ الوصفة</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="سلطات" data-title="فتوش">
+          <img src="images/recipe-2.jpg" alt="سلطة فتوش بالخبز المقرمش" loading="lazy">
+          <div class="card-body">
+            <span class="tag">سلطات</span>
+            <h3>فتوش</h3>
+            <p class="meta">20 دقيقة · سهل</p>
+            <button class="link-btn" data-open="2">اقرأ الوصفة</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="مأكولات" data-title="مجدرة بالعدس">
+          <img src="images/recipe-3.jpg" alt="طبق مجدرة بالعدس والبصل المقلي" loading="lazy">
+          <div class="card-body">
+            <span class="tag">مأكولات</span>
+            <h3>مجدرة بالعدس</h3>
+            <p class="meta">45 دقيقة · سهل</p>
+            <button class="link-btn" data-open="3">اقرأ الوصفة</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="مأكولات" data-title="كبة حلبية">
+          <img src="images/recipe-4.jpg" alt="كبة حلبية مقلية على طبق" loading="lazy">
+          <div class="card-body">
+            <span class="tag">مأكولات</span>
+            <h3>كبة حلبية</h3>
+            <p class="meta">90 دقيقة · متقدم</p>
+            <button class="link-btn" data-open="4">اقرأ الوصفة</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="مشروبات" data-title="ليمونادة بالنعناع">
+          <img src="images/recipe-5.jpg" alt="كوب ليمونادة بالنعناع والثلج" loading="lazy">
+          <div class="card-body">
+            <span class="tag">مشروبات</span>
+            <h3>ليمونادة بالنعناع</h3>
+            <p class="meta">10 دقائق · سهل</p>
+            <button class="link-btn" data-open="5">اقرأ الوصفة</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="حلويات" data-title="بسبوسة بالقشطة">
+          <img src="images/recipe-6.jpg" alt="قطع بسبوسة بالقشطة والفستق" loading="lazy">
+          <div class="card-body">
+            <span class="tag">حلويات</span>
+            <h3>بسبوسة بالقشطة</h3>
+            <p class="meta">50 دقيقة · سهل</p>
+            <button class="link-btn" data-open="6">اقرأ الوصفة</button>
+          </div>
+        </article>
+      </div>
+      <p class="empty" id="empty" hidden>لا توجد وصفات تطابق بحثك. جرّب كلمة أخرى.</p>
+    </section>
+
+    <section class="about" id="about">
+      <h2>عن المدونة</h2>
+      <p>بدأت مذاق من دفتر وصفات قديم كانت تكتب فيه الجدّة مقاديرها بالعين. أجرّب كل وصفة في مطبخي أكثر من مرة قبل نشرها، وأكتبها بالكيلو والكوب والملعقة حتى تنجح معك من أول مرة.</p>
+    </section>
+
+    <section class="subscribe" id="subscribe">
+      <h2>وصفة جديدة كل أسبوع في بريدك</h2>
+      <form id="subscribe-form" novalidate>
+        <input type="email" id="email" placeholder="بريدك الإلكتروني" aria-label="بريدك الإلكتروني" required>
+        <button type="submit" class="btn">اشترك</button>
+      </form>
+      <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>مذاق · جميع الحقوق محفوظة ٢٠٢٦</p>
+  </footer>
+
+  <dialog id="recipe-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" aria-label="إغلاق">✕</button>
+    <h2 id="dialog-title"></h2>
+    <p class="meta" id="dialog-meta"></p>
+    <p class="dialog-intro" id="dialog-intro"></p>
+    <h3>المقادير</h3>
+    <ul id="dialog-ingredients"></ul>
+    <h3>طريقة التحضير</h3>
+    <ol id="dialog-steps"></ol>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
